@@ -1,0 +1,103 @@
+
+.shorten{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../images/bg-shorten-mobile.svg);
+    background-color: var(--Dark-Violet);
+    background-size: cover;
+    gap: 20px;
+    width: 328px;
+    padding: 24px;
+    border-radius: 7px;
+    margin-top: -80px;
+    z-index: 1;
+}
+
+
+
+.shorten__input{
+    width: 280px;
+    height: 48px;
+    border-radius: 7px;
+    border: none;
+}
+
+.shorten__paragraph{
+    display: none;
+    color: var(--Red);
+    font-size: 12px;
+    margin-top: -16px;
+    align-self: flex-start;
+    font-style: italic;
+}
+
+.shorten__button{
+    width: 280px;
+    height: 48px;
+    border-radius: 7px;
+    border: none;
+    background-color: var(--Cyan);
+    color: var(--White);
+    font-size: 20px;
+}
+
+input{
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+input::placeholder{ 
+    color: var(--Gray);
+    font-size: 18px;
+}
+
+input:focus{
+    outline: solid;
+    color: var(--Red);
+}
+
+
+
+@media only screen and (min-width: 800px) {
+    
+    .shorten{
+        display: grid;
+        grid-template-areas: 
+            "input input input button"
+            "link link link link";
+
+        width: 1100px;
+        padding: 48px 60px;
+        grid-column-gap: 20px;
+        grid-row-gap: 0;
+    }
+    .shorten__input{
+        grid-area: input;
+        width: 100%;
+        height: 65px;
+    }
+
+    .shorten__paragraph{
+       margin-top: 7px;
+       font-size: 14px;
+       grid-area: link;
+       margin-bottom: -30px;
+    }
+
+    .shorten__button{
+        grid-area: button;
+        width: 100%;
+        height: 65px;
+    }
+
+    .shorten__button:hover{
+        cursor: pointer;
+        opacity: 0.2;
+    }
+
+    input[value="Shorten a link here..."]{ 
+        font-size: 20px;  
+        padding-left: 80px;
+    }
+}

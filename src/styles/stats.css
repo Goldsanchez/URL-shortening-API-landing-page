@@ -1,0 +1,133 @@
+.stats{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #F0F1F6;
+    padding: 100px 24px 40px 24px;
+    margin-top: -80px;
+    width: 100%;
+}
+
+.stats__response{
+    display: none;
+    flex-direction: column;
+    background-color: var(--White);
+    padding: 15px 0px;
+    gap: 12px;
+    border-radius: 7px;
+}
+.stats__original-link{
+    text-align: left;
+    margin: 0 10px;
+    font-size: 16px;
+}
+.stats__borde{
+    height: 2px;
+    background-color: #F0F1F6;
+    margin: 0px 2px;
+}
+.stats__short-link{
+    text-align: left;
+    margin: 0 10px;
+    font-size: 16px;
+    color: var(--Cyan);
+}
+.stats__copy-button{
+    height: 38px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--Cyan);
+    color: var(--White);
+    font-size: 16px;
+    margin: 0 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.stats__text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 80px 0 40px 0;
+}
+
+.stats__paragraph{
+    color: var(--Gray);
+    font-size: 16px;
+}
+
+.cyan{
+    background-color: var(--Cyan);
+    align-self: center;
+    width: 100px;
+    height: 10px;
+    margin: -30px 0 0 0;
+    padding: 0;
+}
+
+@media only screen and (min-width: 800px) {
+    .stats{
+        align-items: center;
+    }
+    .stats__text{
+        width: 480px;
+    }
+    .stats__title{
+        font-size: 36px;
+    }
+
+    .stats__cards{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        /* gap: 30px; */
+        width: 1100px;
+        height: 450px;
+    }
+
+
+    .stats__response{
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        width: 1100px;
+        background-color: var(--White);
+        padding: 15px 15px;
+        gap: 12px;
+        border-radius: 7px;
+    }
+    .stats__original-link{
+        text-align: left;
+        margin: 0 10px;
+        font-size: 18px;
+        flex-grow: 2;
+    }
+    .stats__borde{
+        display: none;
+    }
+    .stats__short-link{
+        text-align: left;
+        margin: 0 10px;
+        font-size: 18px;
+        color: var(--Cyan);
+        flex-grow: 0.4;
+        text-align: end;
+    }
+    .stats__copy-button{
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        background-color: var(--Cyan);
+        color: var(--White);
+        font-size: 16px;
+        margin: 0 10px;
+        font-family: 'Poppins', sans-serif;
+        flex-grow: 0.1;
+    }
+
+    .stats__copy-button:hover{
+        opacity: 0.5;
+    }
+
+
+}
