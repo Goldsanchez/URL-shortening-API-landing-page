@@ -30,7 +30,6 @@ function App() {
     setTextCopy("Copied!")
     setBackgraoundButtonClick({backgroundColor:"var(--Dark-Violet)"})
     setValue(false)
-    console.log(value);
   }
 
   const changeValue = () => {

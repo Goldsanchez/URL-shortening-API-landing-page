@@ -9,9 +9,11 @@ import { useRef } from 'react'
 export default function Stats({originalLink, shortLink, styleLink, backgraoundButtonClick, textCopy, changeText}) {
 
   const buttonCopyRef = useRef()
+  const shortLinkRef = useRef()
   
   const buttonCopyHandle = (e) => {
       changeText()
+      navigator.clipboard.writeText(shortLinkRef.current.textContent);
   }
 
     
@@ -20,7 +22,7 @@ export default function Stats({originalLink, shortLink, styleLink, backgraoundBu
       <div className="stats__response" style={styleLink}>
         <p className="stats__original-link">{originalLink}</p>
         <div className="stats__borde"></div>
-        <p className="stats__short-link">{shortLink}</p>
+        <p className="stats__short-link" ref={shortLinkRef}>{shortLink}</p>
         <button className="stats__copy-button" ref={buttonCopyRef} onClick={buttonCopyHandle} style={backgraoundButtonClick}>{textCopy}</button>
       </div>
       <div className="stats__text"> 
